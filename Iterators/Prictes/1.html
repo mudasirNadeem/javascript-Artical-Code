@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function higher_order(a){
+           document.write( '<br>' +a  );
+
+        }
+        function anotherFunc(a , b){
+            // document.write(a+b);
+            callback();
+            return a+ b;
+        }
+        function callback(){
+            document.write(  13 + 2);
+        }
+        higher_order(anotherFunc(2,5) );
+
+    </script>
+</body>
+</html>

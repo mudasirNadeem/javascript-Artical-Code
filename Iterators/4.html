@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const artists = ["Picasso", "Kahlo", "Matisse", "Utamaro"];
+
+        artists.forEach((artist) => {
+            document.write(artist + " is one of my favorite artists.");
+        });
+
+        const numbers = [1, 2, 3, 4, 5];
+
+        const squareNumbers = numbers.map((number) => {
+            return number * number;
+        });
+
+        document.write(squareNumbers + '<br>');
+
+        const things = ["desk", "chair", 5, "backpack", 3.14, 100];
+
+        const onlyNumbers = things.filter((thing) => {
+            return typeof thing === "number";
+        });
+
+        document.write(onlyNumbers + '<br>');
+
+    </script>
+</body>
+
+</html>
