@@ -8,65 +8,55 @@
 </head>
 
 <body>
-  <script>
-    var userEmails = [1, 2, 3, 4, 5];
-var userPasswords = [1, 2, 3, 4, 5];
-
-function login() {
-    var userInputEmail = prompt('Enter your Email');
-    var userInputPassword = prompt('Password');
-    function checkPassEmail(){
-        var emailExists = userEmails.filter((email) => email == userInputEmail);
-        var pwdExists = userPasswords.filter((pwd) => pwd == userInputPassword);
-   
-    if (emailExists.length > 0 && pwdExists.length > 0) {
-        alert('Welcome');
-    } else {
-        alert('Your information is wrong. Please register if you are a new user.');
-    }
-}
-    checkPassEmail();
-}
-
-function register() {
-    var userInputName = prompt('Enter your Name');
-    var userInputEmail2 = prompt('Enter your email');
-    var userInputPassword2 = prompt('Enter your password');
-    var emailExistsed = userEmails.filter((email) => email == userInputEmail2);
-    var pwdExistsed = userPasswords.filter((pwd) => pwd == userInputPassword2);
-
-    if (emailExistsed.length > 0 && pwdExistsed.length > 0) {
-        alert('You have already registered.');
-        return;
-    }
-
-    var userInputConfirmPassword;
-    do {
-        userInputConfirmPassword = prompt('Confirm your password');
-    } while (userInputPassword2 !== userInputConfirmPassword);
-
-    userEmails.push(userInputEmail2);
-    userPasswords.push(userInputPassword2);
-
-    alert('Registration successful. You can now log in.');
-}
-
-function main() {
-    while (true) {
-        var userInput = parseFloat(prompt('Enter 0 for login and 1 for registration'));
-
-        if (userInput === 0) {
-            login();
-        } else if (userInput === 1) {
-            register();
-        } else {
-            alert('Invalid input. Please enter 0 for login or 1 for registration.');
+    <script>
+        var userEmails = [1, 2, 3, 4, 5];
+        var userPasswords = [1, 2, 3, 4, 5];
+        function login() {
+            var userInputEmail = prompt('Enter your Email');
+            var userInputPassword = prompt('Password');
+            function checkPassEmail() {
+                var emailExists = userEmails.filter((email) => email == userInputEmail);
+                var pwdExists = userPasswords.filter((pwd) => pwd == userInputPassword);
+                if (emailExists.length > 0 && pwdExists.length > 0) {
+                    alert('Welcome');
+                } else {
+                    alert('Your information is wrong. Please register if you are a new user.');
+                }
+            }
+            checkPassEmail();
         }
-    }
-}
-
-main();
-  </script>
+        function register() {
+            var userInputName = prompt('Enter your Name');
+            var userInputEmail2 = prompt('Enter your email');
+            var userInputPassword2 = prompt('Enter your password');
+            var emailExistsed = userEmails.filter((email) => email == userInputEmail2);
+            var pwdExistsed = userPasswords.filter((pwd) => pwd == userInputPassword2);
+            if (emailExistsed.length > 0 && pwdExistsed.length > 0) {
+                alert('You have already registered.');
+                return;
+            }
+            var userInputConfirmPassword;
+            do {
+                userInputConfirmPassword = prompt('Confirm your password');
+            } while (userInputPassword2 !== userInputConfirmPassword);
+            userEmails.push(userInputEmail2);
+            userPasswords.push(userInputPassword2);
+            alert('Registration successful. You can now log in.');
+        }
+        function main() {
+            while (true) {
+                var userInput = parseFloat(prompt('Enter 0 for login and 1 for registration'));
+                if (userInput === 0) {
+                    login();
+                } else if (userInput === 1) {
+                    register();
+                } else {
+                    alert('Invalid input. Please enter 0 for login or 1 for registration.');
+                }
+            }
+        }
+        main();
+    </script>
 </body>
 
 </html>
