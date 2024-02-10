@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 8;
+        var result = 1;
+        var duplicate = 0;
+        var numToStr = 0
+        for(var i =  num; i >  0; i--){
+            result *= i;
+             numToStr = result.toString();
+             
+            }
+            for(var j = 0; j < numToStr.length; j++){
+               for(var k = j + 1 ;  k < numToStr.length ; k++ ){
+                if (numToStr[j] === numToStr[k]) {
+            duplicate++;
+            break;
+        }
+               }
+            }
+            console.log(numToStr);
+            console.log(duplicate);
+    </script>
+</body>
+</html>
